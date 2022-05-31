@@ -145,6 +145,11 @@ sudo ln -s /usr/lib/libcrypto.dylib /usr/local/opt/openssl/lib/libcrypto.1.0.0.d
           :oracle-linux-aarch64 (assoc-in (linux :arch "aarch64" :static true)
                                                  [:environment :POD_DB_TYPE] "oracle")
           :oracle-mac (assoc-in (mac) [:environment :POD_DB_TYPE] "oracle")
+          :db2-linux (assoc-in (linux :static true)
+                                         [:environment :POD_DB_TYPE] "db2")
+          :db2-linux-aarch64 (assoc-in (linux :arch "aarch64" :static true)
+                                                 [:environment :POD_DB_TYPE] "db2")
+          :db2-mac (assoc-in (mac) [:environment :POD_DB_TYPE] "db2")
           :mssql-linux (assoc-in (linux :static true)
                                         [:environment :POD_DB_TYPE] "mssql")
           :mssql-linux-aarch64 (assoc-in (linux :arch "aarch64" :static true)
@@ -164,6 +169,9 @@ sudo ln -s /usr/lib/libcrypto.dylib /usr/local/opt/openssl/lib/libcrypto.1.0.0.d
                            "oracle-linux"
                            "oracle-linux-aarch64"
                            "oracle-mac"
+                           "db2-mac"
+                           "db2-linux"
+                           "db2-linux-aarch64"
                            "mssql-linux"
                            "mssql-linux-aarch64"
                            "mssql-mac"]})))

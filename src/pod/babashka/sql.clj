@@ -138,6 +138,7 @@
                   features/hsqldb? "pod.babashka.hsqldb"
                   features/mysql? "pod.babashka.mysql"
                   features/oracle? "pod.babashka.oracle"
+                  features/db2? "pod.babashka.db2"
                   features/mssql? "pod.babashka.mssql"
                   :else (throw (Exception. "Feature flag expected."))))
 
@@ -145,6 +146,7 @@
                       features/hsqldb? "pod.babashka.hsqldb.sql"
                       features/mysql? "pod.babashka.mysql.sql"
                       features/oracle? "pod.babashka.oracle.sql"
+                      features/db2? "pod.babashka.db2.sql"
                       features/mssql? "pod.babashka.mssql.sql"
                       :else (throw (Exception. "Feature flag expected."))))
 

@@ -42,6 +42,13 @@ else
     POD_LEIN_PROFILES+=",-feature/oracle"
 fi
 
+if [ "$POD_DB_TYPE" = "db2" ]
+then
+    POD_LEIN_PROFILES+=",+feature/db2"
+else
+    POD_LEIN_PROFILES+=",-feature/db2"
+fi
+
 if [ "$POD_DB_TYPE" = "mssql" ]
 then
     POD_LEIN_PROFILES+=",+feature/mssql"

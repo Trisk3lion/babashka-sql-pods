@@ -22,6 +22,11 @@ then
     clojure -M:test -n pod.babashka.oracle-test
 fi
 
+if [ "$POD_DB_TYPE" = "db2" ]
+then
+    clojure -M:test -n pod.babashka.db2-test
+fi
+
 if [ "$POD_DB_TYPE" = "mssql" ]
 then
     clojure -M:test -n pod.babashka.mssql-test

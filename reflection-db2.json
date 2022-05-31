@@ -1,0 +1,12 @@
+[{
+    "name":"com.ibm.db2.jcc.DB2Driver"
+},
+ {
+    "name":"com.ibm.db2.jcc.DB2SimpleDataSource",
+    "queriedMethods":[
+        {"name":"getConnection","parameterTypes":[] },
+        {"name":"getConnection","parameterTypes":["java.lang.Object"] },
+        {"name":"getConnection","parameterTypes":["java.lang.String","java.lang.String"] }
+    ]
+}
+]

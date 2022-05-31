@@ -124,6 +124,21 @@ build_script:
 
     call bb release-artifact %zip%
 
+- cmd: >-
+    set POD_DB_TYPE=db2
+
+    call bb script/compile.clj
+
+    echo Creating zip archive
+
+    set /P VERSION=< resources\POD_BABASHKA_SQL_VERSION
+
+    set zip=pod-babashka-%POD_DB_TYPE%-%VERSION%-windows-amd64.zip
+
+    jar -cMf %zip% pod-babashka-%POD_DB_TYPE%.exe
+
+    call bb release-artifact %zip%
+
 artifacts:
 - path: pod-babashka-hsqldb-*-windows-amd64.zip
   name: pod-babashka-hsqldb
@@ -135,3 +150,5 @@ artifacts:
   name: pod-babashka-postgresql
 - path: pod-babashka-oracle-*-windows-amd64.zip
   name: pod-babashka-oracle
+- path: pod-babashka-db2-*-windows-amd64.zip
+  name: pod-babashka-db2

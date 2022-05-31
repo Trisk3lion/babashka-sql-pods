@@ -23,7 +23,8 @@
              :feature/mssql {:dependencies [[com.microsoft.sqlserver/mssql-jdbc "9.2.0.jre11"]]}
              :feature/hsqldb {:dependencies [[org.hsqldb/hsqldb "2.6.0"]]}
              :feature/mysql {:dependencies [[mysql/mysql-connector-java "8.0.25"]]}
-             :feature/oracle {:dependencies [[io.helidon.integrations.db/ojdbc "2.3.0"]]}} ; ojdbc10 + GraalVM config, by Oracle
+             :feature/oracle {:dependencies [[io.helidon.integrations.db/ojdbc "2.3.0"]]} ; ojdbc10 + GraalVM config, by Oracle
+             :feature/db2 {:dependencies [[com.ibm.db2/jcc "11.5.7.0"]]}}
   :deploy-repositories [["clojars" {:url "https://clojars.org/repo"
                                     :username :env/clojars_user
                                     :password :env/clojars_pass
